@@ -17,7 +17,7 @@
                 </li>
                 
                 <li>
-                    <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'text-blue-500' : ''}}">Employee Report</a>
+                    <a href="#" class="{{ request()->is('#') ? 'text-blue-500' : ''}}">Employee Report</a>
                 </li>
             </ul>
         </aside>

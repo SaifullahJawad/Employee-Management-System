@@ -26,5 +26,5 @@ Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'
 
 Route::get('dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
-Route::get('owner/employee/create', [OwnerController::class, 'create']);
-Route::post('owner/employees', [OwnerController::class, 'store']);
+Route::get('owner/employee/create', [OwnerController::class, 'create'])->middleware('can:owner');
+Route::post('owner/employees', [OwnerController::class, 'store'])->middleware('can:owner');

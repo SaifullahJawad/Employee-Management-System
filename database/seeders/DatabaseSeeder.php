@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Attendance;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -63,7 +65,8 @@ class DatabaseSeeder extends Seeder
             'user_type' => 'employee'
         ]);
 
-        
+
+       
         
     }
 }
