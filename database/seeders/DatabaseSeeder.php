@@ -26,10 +26,44 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'username' => 'Rifat123',
-            'email' => 'rifat@genieinfo.tech',
+            'email' => 'rifat123@genieinfo.tech',
             'password' => bcrypt('1234567'),
             'user_type' => 'employee'
         ]);
+
+
+        User::create([
+            'username' => 'Shohag01',
+            'email' => 'shohag01@genieinfo.tech',
+            'password' => bcrypt('1234567'),
+            'user_type' => 'employee'
+        ]);
+
+
+        User::create([
+            'username' => 'Ahanf05',
+            'email' => 'ahanf05@genieinfo.tech',
+            'password' => bcrypt('1234567'),
+            'user_type' => 'employee'
+        ]);
+
+
+        User::create([
+            'username' => 'Emon3',
+            'email' => 'emon3@genieinfo.tech',
+            'password' => bcrypt('1234567'),
+            'user_type' => 'employee'
+        ]);
+
+
+        User::create([
+            'username' => 'Bushra08',
+            'email' => 'bushra08@genieinfo.tech',
+            'password' => bcrypt('1234567'),
+            'user_type' => 'employee'
+        ]);
+
+        
         
     }
 }

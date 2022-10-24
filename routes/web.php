@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\OwnerController;
 use App\Http\Controllers\SessionsController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,6 @@ Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
 Route::get('dashboard', [DashboardController::class, 'index'])->middleware('auth');
+
+Route::get('owner/employee/create', [OwnerController::class, 'create']);
+Route::post('owner/employees', [OwnerController::class, 'store']);
