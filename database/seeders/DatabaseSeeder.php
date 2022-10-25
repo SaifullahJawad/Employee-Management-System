@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'username' => 'hr@genieinfo',
             'email' => 'hr@genieinfo.tech',
-            'password' => bcrypt('1234567'),
+            'password' => '1234567',
             'user_type' => 'owner'
         ]);
         
@@ -42,12 +42,12 @@ class DatabaseSeeder extends Seeder
         $user1 = User::create([
             'username' => 'Rifat123',
             'email' => 'rifat123@genieinfo.tech',
-            'password' => bcrypt('1234567'),
+            'password' => '1234567',
             'user_type' => 'employee'
         ]);
 
         $day = Day::create([
-            'date' => '2022-10-01'
+            'date' => Carbon::parse('2022-10-01 00:00:00')->toDateTime()
         ]);
 
         Report::create([
@@ -55,9 +55,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => '09:00:00',
+            'check_in' => Carbon::parse('2022-10-01 08:48:41')->toDateTime(),
 
-            'check_out' => '05:00:00'
+            'check_out' => Carbon::parse('2022-10-01 16:48:41')->toDateTime()
             
         ]);
 
@@ -66,7 +66,7 @@ class DatabaseSeeder extends Seeder
         $user2 = User::create([
             'username' => 'Shohag01',
             'email' => 'shohag01@genieinfo.tech',
-            'password' => bcrypt('1234567'),
+            'password' => '1234567',
             'user_type' => 'employee'
         ]);
 
@@ -75,9 +75,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => '08:00:00',
+            'check_in' => Carbon::parse('2022-10-01 09:48:41')->toDateTime(),
 
-            'check_out' => '04:00:00'
+            'check_out' => Carbon::parse('2022-10-01 17:48:41')->toDateTime()
             
         ]);
 
@@ -86,7 +86,7 @@ class DatabaseSeeder extends Seeder
         $user3 = User::create([
             'username' => 'Ahanf05',
             'email' => 'ahanf05@genieinfo.tech',
-            'password' => bcrypt('1234567'),
+            'password' => '1234567',
             'user_type' => 'employee'
         ]);
 
@@ -95,9 +95,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => '10:00:00',
+            'check_in' => Carbon::parse('2022-10-01 10:48:41')->toDateTime(),
 
-            'check_out' => '06:00:00'
+            'check_out' => Carbon::parse('2022-10-01 18:48:41')->toDateTime()
             
         ]);
 
@@ -106,7 +106,7 @@ class DatabaseSeeder extends Seeder
         $user4 = User::create([
             'username' => 'Emon3',
             'email' => 'emon3@genieinfo.tech',
-            'password' => bcrypt('1234567'),
+            'password' => '1234567',
             'user_type' => 'employee'
         ]);
 
@@ -115,9 +115,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' =>$day->id,
 
-            'check_in' => '09:45:00',
+            'check_in' => Carbon::parse('2022-10-01 09:48:41')->toDateTime(),
 
-            'check_out' => '05:44:15'
+            'check_out' => Carbon::parse('2022-10-01 15:48:41')->toDateTime()
             
         ]);
 
@@ -126,7 +126,7 @@ class DatabaseSeeder extends Seeder
         $user5 = User::create([
             'username' => 'Bushra08',
             'email' => 'bushra08@genieinfo.tech',
-            'password' => bcrypt('1234567'),
+            'password' => '1234567',
             'user_type' => 'employee'
         ]);
 
@@ -135,9 +135,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => '08:30:00',
+            'check_in' => Carbon::parse('2022-10-01 07:48:41')->toDateTime(),
 
-            'check_out' => '04:00:00'
+            'check_out' => Carbon::parse('2022-10-01 13:48:41')->toDateTime()
             
         ]);
 
@@ -147,7 +147,7 @@ class DatabaseSeeder extends Seeder
 
 
         $day = Day::create([
-            'date' => '2022-10-02'
+            'date' => Carbon::parse('2022-10-02 00:00:00')->toDateTime()
         ]);
 
         Report::create([
@@ -155,9 +155,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => '09:00:00',
+            'check_in' => Carbon::parse('2022-10-02 22:48:41')->toDateTime(),
 
-            'check_out' => '05:00:00'
+            'check_out' => Carbon::parse('2022-10-03 06:48:41')->toDateTime()
             
         ]);
 
@@ -167,9 +167,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => '08:00:00',
+            'check_in' => Carbon::parse('2022-10-02 21:48:41')->toDateTime(),
 
-            'check_out' => '04:00:00'
+            'check_out' => Carbon::parse('2022-10-03 05:48:41')->toDateTime()
             
         ]);
 
@@ -179,9 +179,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => '10:00:00',
+            'check_in' => Carbon::parse('2022-10-02 23:48:41')->toDateTime(),
 
-            'check_out' => '06:00:00'
+            'check_out' => Carbon::parse('2022-10-03 07:48:41')->toDateTime()
             
         ]);
 
@@ -191,9 +191,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' =>$day->id,
 
-            'check_in' => '09:45:00',
+            'check_in' => Carbon::parse('2022-10-02 22:48:41')->toDateTime(),
 
-            'check_out' => '05:44:15'
+            'check_out' => Carbon::parse('2022-10-03 04:48:41')->toDateTime()
             
         ]);
 
@@ -203,9 +203,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => '08:30:00',
+            'check_in' => Carbon::parse('2022-10-02 22:48:41')->toDateTime(),
 
-            'check_out' => '04:00:00'
+            'check_out' => Carbon::parse('2022-10-03 02:48:41')->toDateTime()
             
         ]);
 

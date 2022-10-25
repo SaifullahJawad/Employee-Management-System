@@ -17,8 +17,8 @@ class CreateReportsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('day_id')->constrained()->cascadeOnDelete();
-            $table->time('check_in')->nullable();
-            $table->time('check_out')->nullable();
+            $table->dateTime('check_in')->nullable();
+            $table->dateTime('check_out')->nullable();
             $table->timestamps();
         });
     }

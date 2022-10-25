@@ -7,5 +7,5 @@
         $classes .= ' bg-blue-500 text-white';
 @endphp
 
-<a {{ $attributes([ 'class' => $classes ]) }} {{-- $attributes() merges any attributes passed down to this component; like $attribures->merge()--}}
+<a {{ $attributes([ 'class' => $classes ]) }}
 >{{ $slot }}</a>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\OwnerController;
 use App\Http\Controllers\SessionsController;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,5 @@ Route::get('dashboard', [DashboardController::class, 'index'])->middleware('auth
 
 Route::get('owner/employee/create', [OwnerController::class, 'create'])->middleware('can:owner');
 Route::post('owner/employees', [OwnerController::class, 'store'])->middleware('can:owner');
+Route::get('owner/employees/report', [OwnerController::class, 'index'])->middleware('can:owner');
+Route::get('owner/employees/report/{employee}', [OwnerController::class, 'show'])->middleware('can:owner');

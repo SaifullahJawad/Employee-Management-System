@@ -2,15 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Day;
+use App\Models\Report;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OwnerController extends Controller
 {
+    public function index()
+    {
+        return view('owner.employees.report', [
+            'reports' => Report::latest()->filter(request('day_id'))->get(),
+            'days' => Day::latest()->get(),
+            'currentDay' => Day::firstWhere('id', request('day_id'))
+        ]);
+
+        //DB::raw('( SELECT MAX(day_id) FROM reports )');
+
+
+    }
     public function create()
     {
         return view('owner.employees.create');
     }
+
+
 
     public function store()
     {
@@ -32,5 +49,13 @@ class OwnerController extends Controller
         
         return redirect('/dashboard')->with('success', 'Employee Added');
 
+    }
+
+
+    public function show(User $employee)
+    {
+        return view('owner.employees.single-report', [
+            'employee' => $employee
+        ]);
     }
 }

@@ -8,8 +8,8 @@
                 @csrf
 
 
-                <x-form.input name="email" type="email" autocomplete="username"/>
-                <x-form.input name="password" type="password" autocomplete="current-password"/>
+                <x-form.input name="email" type="email" />
+                <x-form.input name="password" type="password" />
 
                 <div class="mt-6">
                     <button 
