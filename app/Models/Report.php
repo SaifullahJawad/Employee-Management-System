@@ -15,15 +15,26 @@ class Report extends Model
     protected $with = ['employee', 'day'];
 
 
-    public function getCheckIn()
+    public function getCheckInTime()
     {
-        return Carbon::parse($this->check_in)->format('g:i a');
+        if($this->check_in ?? false)
+        {
+            return Carbon::parse($this->check_in)->format('g:i a');
+        }
+
+        return null;
+        
     }
 
 
-    public function getCheckout()
+    public function getCheckoutTime()
     {
-        return Carbon::parse($this->check_out)->format('g:i a');
+        if($this->check_out ?? false)
+        {
+            return Carbon::parse($this->check_out)->format('g:i a');
+        }
+
+        return null;
     }
 
     
@@ -33,8 +44,13 @@ class Report extends Model
         {
             return Carbon::parse($this->check_in)->diffInHours(Carbon::parse($this->check_out));
         }
+        else
+        {
+            return null;
+        }
         
     }
+
 
 
     public function scopeFilter($query, $filter)

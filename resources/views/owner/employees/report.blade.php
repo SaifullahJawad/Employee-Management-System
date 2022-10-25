@@ -54,7 +54,7 @@
                                                 <div class="flex items-center">
                                                     <div class="text-sm font-medium text-gray-900">
                                                         
-                                                        {{ $report->getCheckIn() }}
+                                                        {{ $report->getCheckInTime() ?? '--' }}
                                                         
                                                         
                                                     </div>
@@ -67,7 +67,7 @@
                                                 <div class="flex items-center">
                                                     <div class="text-sm font-medium text-gray-900">
                                                         
-                                                        {{ $report->getCheckOut() }}
+                                                        {{ $report->getCheckOutTime() ?? '-- ' }}
                                                         
                                                     </div>
                                                 </div>
@@ -79,7 +79,7 @@
                                                 <div class="flex items-center">
                                                     <div class="text-sm font-medium text-gray-900">
                                                         
-                                                    {{$report->calculateOfficeHour()}}
+                                                    {{$report->calculateOfficeHour() ?? '--' }}
                                                         
                                                     </div>
                                                 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -40,12 +41,38 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
     
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
 
     }
+
+
+    public function checkIn()
+    {
+        
+        if ($day = Day::whereDate('date', Carbon::now()->toDateString())->first() ?? false)
+        {
+            return $day->reports()->create([
+                'user_id' => auth()->user()->id,
+                'check_in' => Carbon::now()->toDateTime()
+            ]);
+        }
+        
+        $day = Day::create([
+            'date' => Carbon::now()->toDateTime()
+        ]);
+
+        return $day->reports()->create([
+            'user_id' => auth()->user()->id,
+            'check_in' => Carbon::now()->toDateTime()
+        ]);
+
+    }
+
+
 
     public function reports()
     {
