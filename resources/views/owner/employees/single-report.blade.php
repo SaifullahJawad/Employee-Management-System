@@ -2,7 +2,6 @@
     
     <x-setting heading="{{ $employee->username }} Report">
 
-
         <div class="py-2">
             User Name: {{ $employee->username }}
         </div>
@@ -34,8 +33,10 @@
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                @foreach ($employee->reports as $report)
-                                    
+
+                                @if ($employee->reports->count())
+                                    @foreach ($employee->reports as $report)
+                                        
                                         <tr>
                                             <td class="px-6 py-4 whitespace-nowrap">
                                                 <div class="flex items-center">
@@ -51,7 +52,7 @@
                                                 <div class="flex items-center">
                                                     <div class="text-sm font-medium text-gray-900">
 
-                                                        {{ $report->getCheckIn() }}                                                     
+                                                        {{ $report->getCheckInTime() ?? '--' }}                                                     
                                                         
                                                     </div>
                                                 </div>
@@ -61,7 +62,7 @@
                                                 <div class="flex items-center">
                                                     <div class="text-sm font-medium text-gray-900">
                                                         
-                                                        {{ $report->getCheckOut() }}
+                                                        {{ $report->getCheckOutTime() ?? '-- ' }}
                                                         
                                                     </div>
                                                 </div>
@@ -71,14 +72,26 @@
                                                 <div class="flex items-center">
                                                     <div class="text-sm font-medium text-gray-900">
                                                         
-                                                    {{$report->calculateOfficeHour()}}
+                                                        {{$report->calculateOfficeHour() ?? '--' }}
                                                         
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
                                     
-                                @endforeach
+                                    @endforeach
+                                @else
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="text-sm font-medium text-gray-900">
+                                                    No entry for this user
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endif
+                                
                             </tbody>
                         </table>
                     </div>

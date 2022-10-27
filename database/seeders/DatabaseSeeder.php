@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $day = Day::create([
-            'date' => Carbon::parse('2022-10-01 00:00:00')->toDateTime()
+            'date' => Carbon::parse('2022-10-23 00:00:00')->toDateTime()
         ]);
 
         Report::create([
@@ -55,9 +55,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => Carbon::parse('2022-10-01 08:48:41')->toDateTime(),
+            'check_in' => Carbon::parse('2022-10-23 08:48:41')->toDateTime(),
 
-            'check_out' => Carbon::parse('2022-10-01 16:48:41')->toDateTime()
+            'check_out' => Carbon::parse('2022-10-23 16:48:41')->toDateTime()
             
         ]);
 
@@ -75,9 +75,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => Carbon::parse('2022-10-01 09:48:41')->toDateTime(),
+            'check_in' => Carbon::parse('2022-10-23 09:48:41')->toDateTime(),
 
-            'check_out' => Carbon::parse('2022-10-01 17:48:41')->toDateTime()
+            'check_out' => Carbon::parse('2022-10-23 17:48:41')->toDateTime()
             
         ]);
 
@@ -95,9 +95,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => Carbon::parse('2022-10-01 10:48:41')->toDateTime(),
+            'check_in' => Carbon::parse('2022-10-23 10:48:41')->toDateTime(),
 
-            'check_out' => Carbon::parse('2022-10-01 18:48:41')->toDateTime()
+            'check_out' => Carbon::parse('2022-10-23 18:48:41')->toDateTime()
             
         ]);
 
@@ -115,9 +115,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' =>$day->id,
 
-            'check_in' => Carbon::parse('2022-10-01 09:48:41')->toDateTime(),
+            'check_in' => Carbon::parse('2022-10-23 09:48:41')->toDateTime(),
 
-            'check_out' => Carbon::parse('2022-10-01 15:48:41')->toDateTime()
+            'check_out' => Carbon::parse('2022-10-23 15:48:41')->toDateTime()
             
         ]);
 
@@ -135,9 +135,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => Carbon::parse('2022-10-01 07:48:41')->toDateTime(),
+            'check_in' => Carbon::parse('2022-10-23 07:48:41')->toDateTime(),
 
-            'check_out' => Carbon::parse('2022-10-01 13:48:41')->toDateTime()
+            'check_out' => Carbon::parse('2022-10-23 13:48:41')->toDateTime()
             
         ]);
 
@@ -147,7 +147,7 @@ class DatabaseSeeder extends Seeder
 
 
         $day = Day::create([
-            'date' => Carbon::parse('2022-10-02 00:00:00')->toDateTime()
+            'date' => Carbon::parse('2022-10-24 00:00:00')->toDateTime()
         ]);
 
         Report::create([
@@ -155,9 +155,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => Carbon::parse('2022-10-02 22:48:41')->toDateTime(),
+            'check_in' => Carbon::parse('2022-10-24 22:48:41')->toDateTime(),
 
-            'check_out' => Carbon::parse('2022-10-03 06:48:41')->toDateTime()
+            'check_out' => Carbon::parse('2022-10-25 06:48:41')->toDateTime()
             
         ]);
 
@@ -167,9 +167,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => Carbon::parse('2022-10-02 21:48:41')->toDateTime(),
+            'check_in' => Carbon::parse('2022-10-24 21:48:41')->toDateTime(),
 
-            'check_out' => Carbon::parse('2022-10-03 05:48:41')->toDateTime()
+            'check_out' => Carbon::parse('2022-10-25 05:48:41')->toDateTime()
             
         ]);
 
@@ -179,9 +179,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => Carbon::parse('2022-10-02 23:48:41')->toDateTime(),
+            'check_in' => Carbon::parse('2022-10-24 23:48:41')->toDateTime(),
 
-            'check_out' => Carbon::parse('2022-10-03 07:48:41')->toDateTime()
+            'check_out' => Carbon::parse('2022-10-25 07:48:41')->toDateTime()
             
         ]);
 
@@ -191,9 +191,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' =>$day->id,
 
-            'check_in' => Carbon::parse('2022-10-02 22:48:41')->toDateTime(),
+            'check_in' => Carbon::parse('2022-10-24 22:48:41')->toDateTime(),
 
-            'check_out' => Carbon::parse('2022-10-03 04:48:41')->toDateTime()
+            'check_out' => Carbon::parse('2022-10-25 04:48:41')->toDateTime()
             
         ]);
 
@@ -203,9 +203,9 @@ class DatabaseSeeder extends Seeder
 
             'day_id' => $day->id,
 
-            'check_in' => Carbon::parse('2022-10-02 22:48:41')->toDateTime(),
+            'check_in' => Carbon::parse('2022-10-24 22:48:41')->toDateTime(),
 
-            'check_out' => Carbon::parse('2022-10-03 02:48:41')->toDateTime()
+            'check_out' => Carbon::parse('2022-10-25 02:48:41')->toDateTime()
             
         ]);
 

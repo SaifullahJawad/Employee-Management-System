@@ -5,6 +5,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\OwnerController;
 use App\Http\Controllers\SessionsController;
 use App\Models\Day;
+use App\Models\Report;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
@@ -38,4 +39,5 @@ Route::middleware('can:owner')->group(function () {
 });
 
 
-Route::post('employee/check-in', [EmployeeController::class, 'create'])->middleware('auth');
+Route::post('employee/check-in', [EmployeeController::class, 'checkIn'])->middleware('auth');
+Route::post('employee/check-out', [EmployeeController::class, 'checkOut'])->middleware('auth');

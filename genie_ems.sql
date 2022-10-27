@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2022 at 06:57 AM
+-- Generation Time: Oct 27, 2022 at 08:57 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.24
 
@@ -39,10 +39,9 @@ CREATE TABLE `days` (
 --
 
 INSERT INTO `days` (`id`, `date`, `created_at`, `updated_at`) VALUES
-(1, '2022-10-01 00:00:00', '2022-10-25 00:39:25', '2022-10-25 00:39:25'),
-(2, '2022-10-02 00:00:00', '2022-10-25 00:39:26', '2022-10-25 00:39:26'),
-(3, '2022-10-03 09:16:17', NULL, NULL),
-(5, '2022-10-25 06:10:08', NULL, NULL);
+(1, '2022-10-23 00:00:00', '2022-10-27 18:31:28', '2022-10-27 18:31:28'),
+(2, '2022-10-24 00:00:00', '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(3, '2022-10-28 00:31:39', '2022-10-27 18:31:39', '2022-10-27 18:31:39');
 
 -- --------------------------------------------------------
 
@@ -116,19 +115,18 @@ CREATE TABLE `reports` (
 --
 
 INSERT INTO `reports` (`id`, `user_id`, `day_id`, `check_in`, `check_out`, `created_at`, `updated_at`) VALUES
-(1, 2, 1, '2022-10-01 08:48:41', '2022-10-01 16:48:41', '2022-10-25 00:39:25', '2022-10-25 00:39:25'),
-(2, 3, 1, '2022-10-01 09:48:41', '2022-10-01 17:48:41', '2022-10-25 00:39:25', '2022-10-25 00:39:25'),
-(3, 4, 1, '2022-10-01 10:48:41', '2022-10-01 18:48:41', '2022-10-25 00:39:25', '2022-10-25 00:39:25'),
-(4, 5, 1, '2022-10-01 09:48:41', '2022-10-01 15:48:41', '2022-10-25 00:39:26', '2022-10-25 00:39:26'),
-(5, 6, 1, '2022-10-01 07:48:41', '2022-10-01 13:48:41', '2022-10-25 00:39:26', '2022-10-25 00:39:26'),
-(6, 2, 2, '2022-10-02 22:48:41', '2022-10-03 06:48:41', '2022-10-25 00:39:26', '2022-10-25 00:39:26'),
-(7, 3, 2, '2022-10-02 21:48:41', '2022-10-03 05:48:41', '2022-10-25 00:39:26', '2022-10-25 00:39:26'),
-(8, 4, 2, '2022-10-02 23:48:41', '2022-10-03 07:48:41', '2022-10-25 00:39:26', '2022-10-25 00:39:26'),
-(9, 5, 2, '2022-10-02 22:48:41', '2022-10-03 04:48:41', '2022-10-25 00:39:26', '2022-10-25 00:39:26'),
-(10, 6, 2, '2022-10-02 22:48:41', '2022-10-03 02:48:41', '2022-10-25 00:39:26', '2022-10-25 00:39:26'),
-(11, 4, 3, NULL, NULL, NULL, NULL),
-(12, 5, 3, NULL, NULL, NULL, NULL),
-(13, 3, 5, '2022-10-25 10:50:51', NULL, '2022-10-25 04:50:51', '2022-10-25 04:50:51');
+(1, 2, 1, '2022-10-23 08:48:41', '2022-10-23 16:48:41', '2022-10-27 18:31:28', '2022-10-27 18:31:28'),
+(2, 3, 1, '2022-10-23 09:48:41', '2022-10-23 17:48:41', '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(3, 4, 1, '2022-10-23 10:48:41', '2022-10-23 18:48:41', '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(4, 5, 1, '2022-10-23 09:48:41', '2022-10-23 15:48:41', '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(5, 6, 1, '2022-10-23 07:48:41', '2022-10-23 13:48:41', '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(6, 2, 2, '2022-10-24 22:48:41', '2022-10-25 06:48:41', '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(7, 3, 2, '2022-10-24 21:48:41', '2022-10-25 05:48:41', '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(8, 4, 2, '2022-10-24 23:48:41', '2022-10-25 07:48:41', '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(9, 5, 2, '2022-10-24 22:48:41', '2022-10-25 04:48:41', '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(10, 6, 2, '2022-10-24 22:48:41', '2022-10-25 02:48:41', '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(11, 7, 3, '2022-10-28 00:45:04', '2022-10-28 06:00:32', '2022-10-27 18:45:04', '2022-10-27 18:45:32'),
+(12, 8, 3, '2022-10-28 00:47:39', NULL, '2022-10-27 18:47:39', '2022-10-27 18:47:39');
 
 -- --------------------------------------------------------
 
@@ -153,12 +151,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `email_verified_at`, `password`, `user_type`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'hr@genieinfo', 'hr@genieinfo.tech', NULL, '$2y$10$DrbWURvwabpZookW2ZDPXu4pBuI9z69/7qe.kT/FPeba21yDKyYXm', 'owner', NULL, '2022-10-25 00:39:25', '2022-10-25 00:39:25'),
-(2, 'Rifat123', 'rifat123@genieinfo.tech', NULL, '$2y$10$nvUN.bskLDa/MA5HMvF9C.cyrm2tIUhMh9JhnUqn/IHPl6e9b6la2', 'employee', NULL, '2022-10-25 00:39:25', '2022-10-25 00:39:25'),
-(3, 'Shohag01', 'shohag01@genieinfo.tech', NULL, '$2y$10$F/GgG5yhne7IL8cUJDgqFuqN6McFTlJXBBdiRWafai7OCJlGeOfz6', 'employee', NULL, '2022-10-25 00:39:25', '2022-10-25 00:39:25'),
-(4, 'Ahanf05', 'ahanf05@genieinfo.tech', NULL, '$2y$10$Geb8m5SEIxw2JDKQXdgSZ.Dla1nnrK46sfbEOaq7aCfWeKVGCemD.', 'employee', NULL, '2022-10-25 00:39:25', '2022-10-25 00:39:25'),
-(5, 'Emon3', 'emon3@genieinfo.tech', NULL, '$2y$10$a/AMnjt8AGbqKNNt2tT7AO.rgtbDMoC2HJ5AHvKqEo6B1FQUbsfxa', 'employee', NULL, '2022-10-25 00:39:26', '2022-10-25 00:39:26'),
-(6, 'Bushra08', 'bushra08@genieinfo.tech', NULL, '$2y$10$Ju15AZQvkPDRg4DE7INzf.yI9WR3xoLgXIyTVLxFwgxU.PBTk32Xi', 'employee', NULL, '2022-10-25 00:39:26', '2022-10-25 00:39:26');
+(1, 'hr@genieinfo', 'hr@genieinfo.tech', NULL, '$2y$10$x9s5VbU3K/LfIcAPTpUoNulvy0iTiLDKfFiIfXrWzrHHebUrPMdv.', 'owner', NULL, '2022-10-27 18:31:28', '2022-10-27 18:31:28'),
+(2, 'Rifat123', 'rifat123@genieinfo.tech', NULL, '$2y$10$1Shb37cHz68z0zL9ZsYhV.8ZauwZYapjQZP7Z.phH1b4Afc2sqgue', 'employee', NULL, '2022-10-27 18:31:28', '2022-10-27 18:31:28'),
+(3, 'Shohag01', 'shohag01@genieinfo.tech', NULL, '$2y$10$XX7B5EPAEbu.133m81hyweSPyZYnqiOoykzKPEa8Nm0qclMG9UWn6', 'employee', NULL, '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(4, 'Ahanf05', 'ahanf05@genieinfo.tech', NULL, '$2y$10$OOKO6OYMTMoWLqJ//3DcdO6HM0c2tpGB2UPt68Of.b6AFYgplmlGG', 'employee', NULL, '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(5, 'Emon3', 'emon3@genieinfo.tech', NULL, '$2y$10$XGgma04NsdWHpADoky0wGuVmYFKLWI9E7w4DSt9vlY6JSiS6mMdxW', 'employee', NULL, '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(6, 'Bushra08', 'bushra08@genieinfo.tech', NULL, '$2y$10$MmC2ROmJ1OXGmFt5fd1cpOQiqetUooq1qTcAel/z/60cPI3G9eQEu', 'employee', NULL, '2022-10-27 18:31:29', '2022-10-27 18:31:29'),
+(7, 'Ishmam', 'ishmam@gmail.com', NULL, '$2y$10$Uwvncf2VmXxtPEs8jY8Iv.V3KUMrdEaBzWuB/ILcb0cpdD3QkMyzG', 'employee', NULL, '2022-10-27 18:40:23', '2022-10-27 18:40:23'),
+(8, 'Mahir', 'mahir@gmail.com', NULL, '$2y$10$8K5/g7yOYMochO.tNhPpY.s2k376sdtUHL..vt1o4oBz9qDtboQN6', 'employee', NULL, '2022-10-27 18:44:11', '2022-10-27 18:44:11');
 
 --
 -- Indexes for dumped tables
@@ -214,7 +214,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `days`
 --
 ALTER TABLE `days`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -232,13 +232,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

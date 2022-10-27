@@ -63,14 +63,36 @@
                                                     <div class="py-2 flex items-center justify-center">
                                                         {{ Carbon\Carbon::now()->format('F j, Y') }}
                                                     </div>
-                                        
-                                                    <div class="py-6 px-20">
-                                                        <form action="/employee/check-in" method="POST">
-                                                            @csrf
-                                                            <button type="submit" class="bg-green-600 text-white uppercase font-semibold text-xs py-3 px-12 rounded-xl hover:bg-green-800">
-                                                                Check In</button>
-                                                        </form>
-                                                    </div>
+                                                    
+
+                                                    @if (auth()->user()->cannot('checked_in'))
+                                                        <div class="py-6 px-20">
+                                                            <form action="/employee/check-in" method="POST">
+                                                                @csrf
+                                                                <button type="submit" class="bg-green-600 text-white uppercase font-semibold text-xs py-3 px-12 rounded-xl hover:bg-green-800">
+                                                                    Check In</button>
+                                                            </form>
+                                                        </div>
+                                                    @endif
+
+                                                    @if (auth()->user()->can('checked_in') && auth()->user()->cannot('checked_out'))
+                                                        <div class="py-6 px-20">
+                                                            <form action="/employee/check-out" method="POST">
+                                                                @csrf
+                                                                <button type="submit" class="bg-blue-600 text-white uppercase font-semibold text-xs py-3 px-12 rounded-xl hover:bg-blue-800">
+                                                                    Check Out</button>
+                                                            </form>
+                                                        </div>
+                                                    @endif
+                                                        
+                                                    
+                                                    @if (auth()->user()->can('checked_in') && auth()->user()->can('checked_out'))
+                                                        <div class="py-6 px-20">
+                                                            You are Checked Out for the day
+                                                        </div>
+                                                    @endif
+                                                  
+                                                    
                                                     
                                                 </div>
                                             </div>

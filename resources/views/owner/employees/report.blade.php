@@ -34,8 +34,11 @@
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                @foreach ($reports as $report)
-                                    
+
+                                @if ($reports->count())
+
+                                    @foreach ($reports as $report)
+                                        
                                         <tr>
                                             <td class="px-6 py-4 whitespace-nowrap">
                                                 <a href="/owner/employees/report/{{ $report->employee->id }}">
@@ -86,8 +89,21 @@
                                                 </a>
                                             </td>
                                         </tr>
-                                    
-                                @endforeach
+                                
+                                    @endforeach
+
+                                @else
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="text-sm font-medium text-gray-900">
+                                                    No entry for this date
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endif
+                                
                             </tbody>
                         </table>
                     </div>

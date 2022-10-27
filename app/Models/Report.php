@@ -61,7 +61,7 @@ class Report extends Model
         }
         else
         {
-            $query->where('day_id', Day::latest()->first()->id);
+            $query->where('day_id', Day::latest('id')->first()->id);
         }
         
     }

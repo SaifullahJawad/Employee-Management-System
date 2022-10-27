@@ -14,11 +14,9 @@ class OwnerController extends Controller
     {
         return view('owner.employees.report', [
             'reports' => Report::latest()->filter(request('day_id'))->get(),
-            'days' => Day::latest()->get(),
+            'days' => Day::latest('id')->get(),
             'currentDay' => Day::firstWhere('id', request('day_id'))
         ]);
-
-        //DB::raw('( SELECT MAX(day_id) FROM reports )');
 
 
     }
